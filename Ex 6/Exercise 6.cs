@@ -12,8 +12,8 @@ namespace Facade.F1
         public static void Main()
         {
             Facade facade = new Facade();
-            facade.MethodA();
-            facade.MethodB();
+            facade.USA_GP();
+            facade.Mon_GP();
             
             Console.Read();
         }
@@ -82,7 +82,7 @@ namespace Facade.F1
             four = new SubSystemFour();
         }
 
-        public void MethodA()
+        public void USA_GP()
         {
             Console.WriteLine("\nPotential winner on USA GP ---- ");
             one.RedBull(1);
@@ -90,7 +90,7 @@ namespace Facade.F1
             four.McLaren(2);
         }
 
-        public void MethodB()
+        public void Mon_GP()
         {
             Console.WriteLine("\nPotential winner on Monaco GP ---- ");
             two.Mersedes(2);
