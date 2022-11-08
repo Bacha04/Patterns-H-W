@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,48 +14,59 @@ namespace Facade.F1
             Facade facade = new Facade();
             facade.MethodA();
             facade.MethodB();
-            // Wait for user 
+            
             Console.Read();
         }
     }
 
 
-    // "Subsystem ClassA" 
+  
     class SubSystemOne
     {
-        public void MethodOne()
+        public void RedBull(int r)
         {
-            Console.WriteLine(" SubSystemOne Method");
+            if (r == 1)
+                Console.WriteLine("Max Verstappen");
+            else
+                Console.WriteLine("Checo Perez");
         }
     }
 
-    // Subsystem ClassB" 
+  
     class SubSystemTwo
     {
-        public void MethodTwo()
+        public void Mersedes(int m)
         {
-            Console.WriteLine(" SubSystemTwo Method");
+            if(m == 1)
+            Console.WriteLine("Lewis Hammilton");
+            else
+                Console.WriteLine("George Russel");
+
         }
     }
 
 
-    // Subsystem ClassC" 
+   
     class SubSystemThree
     {
-        public void MethodThree()
+        public void Ferrary(int f)
         {
-            Console.WriteLine(" SubSystemThree Method");
+            if (f == 1)
+                Console.WriteLine("Charles Leclerc");
+            else
+                Console.WriteLine("Carlos Sainz");
         }
     }
-    // Subsystem ClassD" 
+  
     class SubSystemFour
     {
-        public void MethodFour()
-        {
-            Console.WriteLine(" SubSystemFour Method");
+        public void McLaren(int ml)
+        { if (ml == 1)
+                Console.WriteLine("Lando Norris");
+            else Console.WriteLine("Daniel Riccarrdo");
         }
     }
-    // "Facade" 
+   
     class Facade
     {
         SubSystemOne one;
@@ -73,17 +84,17 @@ namespace Facade.F1
 
         public void MethodA()
         {
-            Console.WriteLine("\nMethodA() ---- ");
-            one.MethodOne();
-            two.MethodTwo();
-            four.MethodFour();
+            Console.WriteLine("\nPotential winner on USA GP ---- ");
+            one.RedBull(1);
+            two.Mersedes(1);
+            four.McLaren(2);
         }
 
         public void MethodB()
         {
-            Console.WriteLine("\nMethodB() ---- ");
-            two.MethodTwo();
-            three.MethodThree();
+            Console.WriteLine("\nPotential winner on Monaco GP ---- ");
+            two.Mersedes(2);
+            three.Ferrary(1);
         }
     }
 }
